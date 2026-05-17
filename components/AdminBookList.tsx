@@ -103,8 +103,8 @@ export default function AdminBookList({
         </div>
       )}
       <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-        <input type="text" placeholder="Book Title" value={title} onChange={e => setTitle(e.target.value)} className="border rounded px-3 py-2" required />
-        <input type="file" accept=".pdf" onChange={e => setPdfFile(e.target.files?.[0] || null)} className="border rounded px-3 py-2" required={!editingId} />
+        <input type="text" placeholder="Book Title" value={title} onChange={e => setTitle(e.target.value)} className="border rounded text-gray-800 px-3 py-2" required />
+        <input type="file" accept=".pdf" onChange={e => setPdfFile(e.target.files?.[0] || null)} className="border rounded text-gray-800 px-3 py-2" required={!editingId} />
         <div className="md:col-span-2 flex gap-3">
           <button type="submit" disabled={loading} className="bg-indigo-600 text-white px-4 py-2 rounded disabled:opacity-50">
             {loading ? 'Uploading...' : editingId ? 'Update' : 'Add Book'}

@@ -21,7 +21,7 @@ export default function TeacherClassList({ onSelectClass }: { onSelectClass: (cl
 
   return (
     <div>
-      <h2 className="text-xl font-semibold mb-4">📚 Select a Class</h2>
+      <h2 className="text-xl text-black font-semibold mb-4">📚 Select a Class</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {classes.map((cls) => (
           <button

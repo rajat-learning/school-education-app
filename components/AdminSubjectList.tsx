@@ -50,15 +50,15 @@ export default function AdminSubjectList({
       </div>
       {message && <div className="mb-3 p-2 bg-green-100 text-green-700 rounded">{message}</div>}
       <form onSubmit={handleSubmit} className="flex flex-wrap gap-3 mb-6">
-        <input type="text" placeholder="Subject name" value={subjectName} onChange={e => setSubjectName(e.target.value)} className="border rounded px-3 py-2 flex-1" required />
-        <button type="submit" className="bg-indigo-600 text-white px-4 py-2 rounded">{editingId ? 'Update' : 'Add'}</button>
-        {editingId && <button type="button" onClick={resetForm} className="bg-gray-400 text-white px-4 py-2 rounded">Cancel</button>}
+        <input type="text" placeholder="Subject name" value={subjectName} onChange={e => setSubjectName(e.target.value)} className="border rounded px-3 text-gray-500 py-2 flex-1" required />
+        <button type="submit" className="bg-indigo-600 text-gray-500 px-4 py-2 rounded">{editingId ? 'Update' : 'Add'}</button>
+        {editingId && <button type="button" onClick={resetForm} className="bg-gray-400 text-gray-500 px-4 py-2 rounded">Cancel</button>}
       </form>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {subjects.map((sub) => (
           <div key={sub.id} className="border rounded-lg p-4 shadow-sm hover:shadow-md transition bg-white">
             <div className="flex justify-between items-start">
-              <h3 className="font-bold text-lg">{sub.subject_name}</h3>
+              <h3 className="font-bold text-black text-lg">{sub.subject_name}</h3>
               <div className="flex gap-2">
                 <button onClick={() => handleEdit(sub)} className="text-indigo-600 hover:text-indigo-800">Edit</button>
                 <button onClick={() => handleDelete(sub.id)} className="text-red-600 hover:text-red-800">Delete</button>
