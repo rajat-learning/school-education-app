@@ -188,4 +188,3 @@ text
 
 ---
 
-You can copy this content directly into your `README.md` file. Adjust the repository URL and any minor details as needed. This README accurately reflects your current Next.js + Supabase implementation.
